@@ -2,7 +2,7 @@ class Student:
     def __init__(self, name, marks):
         if not isinstance(name, str) or not name:
             raise ValueError("Name must be a non-empty string.")
-        
+
         if not isinstance(marks, (int, float)) or not (0 <= marks <= 100):
             raise ValueError("Marks must be a number between 0 and 100.")
 
@@ -26,13 +26,14 @@ class Student:
         print(f"Marks: {self.marks}")
         print(f"Grade: {self.get_grade()}")
 
+
 # Example usage with error handling:
 try:
-    student1 = Student("MusLIM HABIB", 99)
+    student1 = Student("UZAIR AHMED", 99)
     student1.display()
     print("-----")
 
-    student2 = Student("UZAIR AHMAD", 35)  # Invalid marks
+    student2 = Student("Muslim", 18)  # Invalid marks
     student2.display()
 
 except ValueError as e:
